@@ -1,0 +1,21 @@
+org: mfarago
+app: bootstrap
+service: bootstrap-cron
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: python3.11
+  stage: dev
+  environment:
+    # DB_HOSTNAME: ${param:DB_HOSTNAME}
+    # DB_USERNAME: ${param:DB_USERNAME}
+    # DB_PASSWORD: ${param:DB_PASSWORD}
+
+functions:
+  attendance:
+    handler: mailers.attendance
+    events:
+      # Invoke every day at 2:00 PM UTC+0 (= 9am ET)
+      - schedule: cron(0 14 * * ? *)

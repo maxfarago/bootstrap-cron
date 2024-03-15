@@ -1,0 +1,9 @@
+{
+    "name": "bootstrap-cron",
+    "version": "1.0.0",
+    "description": "Handlers for scheduled jobs run on AWS Lambda using Serverless Framework.",
+    "author": "Max Farago",
+    "scripts": {
+        "attendance": "serverless invoke local --function attendance"
+    }
+}
