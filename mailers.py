@@ -4,7 +4,7 @@ from log import logger
 from db import get_cxn, close_cxn
 
 
-def attendance():
+def attendance(e, context):
     # initial DB connection to get all event data
     try:
         cxn = get_cxn()
