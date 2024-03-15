@@ -9,9 +9,9 @@ provider:
   runtime: python3.11
   stage: dev
   environment:
-    # DB_HOSTNAME: ${param:DB_HOSTNAME}
-    # DB_USERNAME: ${param:DB_USERNAME}
-    # DB_PASSWORD: ${param:DB_PASSWORD}
+    DB_HOSTNAME: ${param:DB_HOSTNAME}
+    DB_USERNAME: ${param:DB_USERNAME}
+    DB_PASSWORD: ${param:DB_PASSWORD}
 
 functions:
   attendance:
